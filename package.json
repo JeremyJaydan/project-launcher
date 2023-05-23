@@ -1,7 +1,7 @@
 {
   "name": "project-launcher",
   "displayName": "project-launcher",
-  "description": "A VSCode extension to launch, search, and create new projects.",
+  "description": "A VSCode extension to launch, search, and create projects.",
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.78.0"
