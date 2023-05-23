@@ -3,7 +3,12 @@
   "icon": "https://github.com/JeremyJaydan/project-launcher/raw/HEAD/project-launcher-icon.png",
   "displayName": "Project Launcher",
   "description": "A VSCode extension to launch, search, and create projects.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JeremyJaydan/project-launcher"
+  },
   "version": "0.0.1",
+  "publisher": "JeremyJaydan",
   "engines": {
     "vscode": "^1.78.0"
   },
