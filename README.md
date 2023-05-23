@@ -6,7 +6,7 @@ A VSCode extension to launch, search, and create projects.
 Open the project launcher via the command menu, look for 'Project Launcher', select that and you will see your projects after you have set the base path.
 
 ## Preview
-![Project Launcher Preview](./project-launcher-preview.png)
+![Project Launcher Preview](https://github.com/JeremyJaydan/project-launcher/raw/HEAD/project-launcher-preview.png)
 
 ## Extension Settings
 
