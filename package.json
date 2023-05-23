@@ -1,6 +1,7 @@
 {
   "name": "project-launcher",
-  "displayName": "project-launcher",
+  "icon": "https://github.com/JeremyJaydan/project-launcher/raw/HEAD/project-launcher-icon.png",
+  "displayName": "Project Launcher",
   "description": "A VSCode extension to launch, search, and create projects.",
   "version": "0.0.1",
   "engines": {
