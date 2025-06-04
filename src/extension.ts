@@ -57,7 +57,24 @@ export function activate(context: vscode.ExtensionContext) {
             
             // if the base path has been set, get projects at that base path
             const projects = await getProjects(basePath.toString());
-            pick.items = projects;
+            
+            // Count existing Untitled folders
+            const untitledRegex = /^Untitled (\d+)$/;
+            const untitledNumbers = projects
+                .map(p => {
+                    const match = p.label.match(untitledRegex);
+                    return match ? parseInt(match[1], 10) : null;
+                })
+                .filter(n => n !== null) as number[];
+            const nextUntitled = untitledNumbers.length > 0 ? Math.max(...untitledNumbers) + 1 : 1;
+
+            // Add "create: Untitled N" to top
+            pick.items = [
+                {
+                    label: `create: Untitled ${nextUntitled}`,
+                },
+                ...projects
+            ];
             
             // if a project does not match with the input, show a create project option
             
@@ -76,6 +93,7 @@ export function activate(context: vscode.ExtensionContext) {
                     pick.items = projects;
                 }
             });
+            
             
             pick.onDidChangeSelection(async selection => {
                 if (selection[0]) {
